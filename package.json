@@ -1,0 +1,52 @@
+{
+  "name": "todomobile",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "build:android": "cd android && ./gradlew assembleRelease",
+    "install:android": "./android/gradlew installRelease",
+    "ios": "react-native run-ios --simulator=iPhone 6s Plus",
+    "build:ios": "react-native run-ios",
+    "install:ios": "react-native run-ios",
+    "lint": "eslint --fix --ext .js src App.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "0.18.0",
+    "moment": "^2.24.0",
+    "native-base": "2.12.0",
+    "react": "16.8.3",
+    "react-native": "0.59.5",
+    "react-native-camera": "2.0.0",
+    "react-native-fast-image": "5.2.0",
+    "react-native-htmlview": "0.13.0",
+    "react-navigation": "2.17.0",
+    "react-number-format": "^4.0.7",
+    "react-redux": "5.0.7",
+    "redux": "4.0.1",
+    "redux-form": "8.1.0",
+    "redux-logger": "3.0.6",
+    "redux-thunk": "2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/runtime": "^7.4.3",
+    "babel-eslint": "10.0.1",
+    "babel-jest": "24.7.1",
+    "babel-plugin-module-resolver": "3.2.0",
+    "eslint": "5.12.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-loader": "1.9.0",
+    "eslint-plugin-import": "2.11.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-react": "7.12.3",
+    "jest": "24.1.0",
+    "metro-react-native-babel-preset": "0.52.0",
+    "react-test-renderer": "16.8.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
