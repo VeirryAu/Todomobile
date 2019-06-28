@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import {
   StyleSheet,
@@ -9,7 +8,6 @@ import {
 import {
   Content
 } from 'native-base'
-import SearchBar from 'components/SearchBar'
 import { queryHome } from 'actions/homeAction'
 
 const styles = StyleSheet.create({
@@ -27,14 +25,13 @@ class Home extends PureComponent {
   }
 
   render () {
-    const { navigation, loadingHome } = this.props
+    const { loadingHome } = this.props
     return (
       <ScrollView
         scrollEventThrottle={300}
         removeClippedSubviews
       >
         <Content style={styles.container}>
-          <SearchBar navigation={navigation} />
           {loadingHome && <ActivityIndicator style={{ marginVertical: 10 }} />}
         </Content>
       </ScrollView>
@@ -42,9 +39,6 @@ class Home extends PureComponent {
   }
 }
 
-Home.propTypes = {
-  navigation: PropTypes.object.isRequired
-}
 
 const mapStateToProps = state => ({
   loadingHome: state.home.loading
